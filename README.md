@@ -63,13 +63,13 @@ Most reproduced results (8/11 models) fall within ±5% of the reported values. M
 
 We additionally provide training loss curves for **all baseline methods and TECamba**. All models exhibit smooth, monotonically decreasing loss trajectories and converge within 10–20 epochs, indicating stable and correct implementations.
 
-![image-20260114192549939](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20260114192549939.png)
+![image-20260114192549939](/pics/image-20260114192549939.png)
 
-![image-20260114192609939](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20260114192609939.png)
+![image-20260114192609939](/pics/image-20260114192609939.png)
 
-![image-20260114192619888](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20260114192619888.png)
+![image-20260114192619888](/pics/image-20260114192619888.png)
 
-![image-20260114192628481](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20260114192628481.png)
+![image-20260114192628481](/pics/image-20260114192628481.png)
 
 ## 2. Hyperparameter Selection and Experimental Fairness
 
