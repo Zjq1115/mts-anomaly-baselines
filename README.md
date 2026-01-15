@@ -158,7 +158,7 @@ The key hyperparameter settings for all methods .For baselines requiring tuning,
 
 All experiments were repeated using **five random seeds**: {7, 42, 123, 888, 2025}.
 
-For each method and dataset, we report **minimum, maximum, and mean ± standard deviation** of the F1 score. Please refer to the data reported in our **Revision note** for specific details.
+For each method and dataset, we report **minimum, maximum, and mean ± standard deviation** of the F1 score. Please refer to the data reported in our **results.xlsx** for specific details.
 
 ### 3.2 Paired Bootstrap Significance Testing
 
