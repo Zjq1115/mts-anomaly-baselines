@@ -100,42 +100,41 @@ All hyperparameters were selected **exclusively on the validation set**. The tes
 ### 2.3 Key Hyperparameter Settings
 
 | ***\*Model\**** | ***\*Dataset\****                            | ***\*Key Hyperparameters\****                                | ***\*Values Used\****                     |
-| --------------- | -------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------- |
-| GDN             | SMD, SMAP, PSM, SWaT                         | embed_vectors length, topk, hidden layers, lr                | 128, 30, 128, 1e-4                        |
-|                 | MSL, WADI                                    |                                                              | 64, 15, 64, 1e-4                          |
-|                 | MBA, NIPS-TS-SWAN                            |                                                              | 64, 20, 64, 1e-4                          |
-| MTGFlow         | SWaT, PSM                                    | win_size, n_blocks, batch, lr                                | 60, 1, 512, 2e-3                          |
-|                 | SMD, SMAP, MSL, MBA, NIPS-TS-SWAN            |                                                              | 60, 2, 256, 2e-3                          |
-|                 | WADI                                         |                                                              | 60, 1, 256, 2e-3                          |
-| TranAD          | SMD, SMAP, MSL, PSM, SWaT, MBA, NIPS-TS-SWAN | win_size, hidden, n_layers, lr                               | 10, 64, 1, 0.01                           |
+| --------------- | -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------|
+| GDN             | SMD, SMAP, PSM, SWaT                         | embed_vectors length, topk, hidden layers                    | 128, 30, 128                              |
+|                 | MSL, WADI                                    |                                                              | 64, 15, 64                                |
+|                 | MBA, NIPS-TS-SWAN                            |                                                              | 64, 20, 64                                |
+| MTGFlow         | SWaT, PSM                                    | win_size, n_blocks, batch                                    | 60, 1, 512                                |
+|                 | SMD, SMAP, MSL, MBA, NIPS-TS-SWAN            |                                                              | 60, 2, 256                                |
+|                 | WADI                                         |                                                              | 60, 1, 256                                |
+| TranAD          | SMD, SMAP, MSL, PSM, SWaT, MBA, NIPS-TS-SWAN | win_size, hidden, n_layers                                   | 10, 64, 1                                 |
 |                 | WADI                                         |                                                              | 10, 32, 1, 5e-3                           |
-| iTransformer    | SWaT, PSM                                    | d_model, n_layers, lr, batch                                 | 512, 3, 1e-3, 32                          |
-|                 | SMD, SMAP, NIPS-TS-SWAN, MBA                 |                                                              | 256, 2, 5e-4, 32                          |
-|                 | MSL, WADI                                    |                                                              | 256, 2, 1e-4, 32                          |
-| D3R             | SWaT, PSM                                    | hidden, n_layers, drift, lr, noise_steps                     | 512, 2, 10, 1e-4, 700                     |
-|                 | SMD, SMAP, NIPS-TS-SWAN                      |                                                              | 512, 2, 10, 1e-4, 500                     |
-|                 | MSL, WADI                                    |                                                              | 512, 2, 5, 1e-4, 300                      |
-|                 | MBA                                          |                                                              | 512, 2, 10, 1e-4, 300                     |
-| IMDiffusion     | SWaT, PSM, SMD, SMAP, NIPS-TS-SWAN           | diff_steps, hidden, \tau , lr                                | 100, 128, 0.02, 1e-3                      |
-|                 | MSL                                          |                                                              | 100, 128, subset-specific, 1e-3           |
-|                 | WADI                                         |                                                              | 100, 64, 0.02, 5e-4                       |
-|                 | MBA                                          |                                                              | 100, 64, 0.02, 1e-3                       |
-| AAD-LLM         | SMD, SMAP, PSM, SWaT                         | spc_window, memory_size, n_layers, d_model, lr               | 5, 10, 4, 64, 1e-4                        |
-|                 | MSL, WADI                                    |                                                              | 7, 15, 2, 32, 5e-5                        |
-|                 | MBA, NIPS-TS-SWAN                            |                                                              | 5, 10, 4, 128, 1e-4                       |
+| iTransformer    | SWaT, PSM                                    | d_model, n_layers, batch                                     | 512, 3, 32                                |
+|                 | SMD, SMAP, NIPS-TS-SWAN, MBA                 |                                                              | 256, 2, 32                                |
+|                 | MSL, WADI                                    |                                                              | 256, 2, 32                                |
+| D3R             | SWaT, PSM                                    | hidden, n_layers, drift, noise_steps                         | 512, 2, 10, 700                           |
+|                 | SMD, SMAP, NIPS-TS-SWAN                      |                                                              | 512, 2, 10, 500                           |
+|                 | MSL, WADI                                    |                                                              | 512, 2, 5, 300                            |
+|                 | MBA                                          |                                                              | 512, 2, 10, 300                           |
+| IMDiffusion     | SWaT, PSM, SMD, SMAP, NIPS-TS-SWAN           | diff_steps, hidden, \tau                                     | 100, 128, 0.02                            |
+|                 | MSL                                          |                                                              | 100, 128, subset-specific                 |
+|                 | WADI, MBA                                    |                                                              | 100, 64, 0.02                             |
+| AAD-LLM         | SMD, SMAP, PSM, SWaT                         | spc_window, memory_size, n_layers, d_model                   | 5, 10, 4, 64                              |
+|                 | MSL, WADI                                    |                                                              | 7, 15, 2, 32                              |
+|                 | MBA, NIPS-TS-SWAN                            |                                                              | 5, 10, 4, 128                             |
 | LLMAD           | SMD, SMAP, PSM, SWaT                         | \alpha, \beta, K_pos, K_neg, temperature, delay              | 0.95, 0.05, 2, 1, 0.7, 7                  |
 |                 | MSL, WADI                                    |                                                              | 0.99, 0.15, 3, 1, 0.7, 7                  |
 |                 | MBA, NIPS-TS-SWAN                            |                                                              | 0.95, 0.05, 2, 1, 0.7, 5                  |
-| GCAD            | SMD, SMAP, PSM, SWaT                         | max_time_lag, sparsity_threshold, \beta, Mixer Predictor Layers, p, lr | 5, 0.01, 1.0, 2, 0.1, 1e-4                |
+| GCAD            | SMD, SMAP, PSM, SWaT                         | max_time_lag, sparsity_threshold, \beta, Mixer Predictor Layers, p | 5, 0.01, 1.0, 2, 0.1                |
 |                 | MSL, WADI                                    |                                                              | 7, 0.02, 1.0, 2, 0.15, 5e-5               |
 |                 | MBA, NIPS-TS-SWAN                            |                                                              | 5, 0.01, 1.0, 3, 0.1, 1e-4                |
-| CAROTS          | SMD, SMAP, PSM, SWaT                         | win_size, batch, τ, sim_init, sim_final, hidden, lr          | 10, 256, 0.1, 0.5, 0.9, 128, 1e-3         |
+| CAROTS          | SMD, SMAP, PSM, SWaT                         | win_size, batch, τ, sim_init, sim_final, hidden              | 10, 256, 0.1, 0.5, 0.9, 128, 1e-3         |
 |                 | MSL, WADI                                    |                                                              | 10, 128, 0.1, 0.6, 0.95, 64, 5e-4         |
 |                 | MBA, NIPS-TS-SWAN                            |                                                              | 10, 256, 0.1, 0.5, 0.8, 128, 1e-3         |
-| MultiverseAD    | SMD, SMAP, PSM, SWaT                         | win, patch, stride, d_model, heads, \alpha, \beta, \gamma, conv1d, lr | 100, 16, 8, 32, 4, 0.1, 0.8, 1.0, 7, 1e-3 |
-|                 | MSL, WADI                                    |                                                              | 100, 16, 8, 16, 4, 0.2, 0.7, 1.0, 5, 5e-4 |
-|                 | MBA, NIPS-TS-SWAN                            |                                                              | 100, 16, 8, 32, 6, 0.1, 0.8, 1.0, 7, 1e-3 |
-| TECamba         | All DataSet                                  | d_model, embed_dim, seq_len, stride, max_lag, dropout, batch, lr | 32, 32, 100, 50, 26, 0.5, 128, 1e-4       |
+| MultiverseAD    | SMD, SMAP, PSM, SWaT                         | win, patch, stride, d_model, heads, \alpha, \beta, \gamma, conv1d | 100, 16, 8, 32, 4, 0.1, 0.8, 1.0, 7  |
+|                 | MSL, WADI                                    |                                                              | 100, 16, 8, 16, 4, 0.2, 0.7, 1.0, 5       |
+|                 | MBA, NIPS-TS-SWAN                            |                                                              | 100, 16, 8, 32, 6, 0.1, 0.8, 1.0, 7       |
+| TECamba         | All DataSet                                  | d_model, embed_dim, seq_len, stride, max_lag, dropout, batch | 32, 32, 100, 50, 26, 0.5, 128             |
 
 ### 2.4 Grid Search Space
 
