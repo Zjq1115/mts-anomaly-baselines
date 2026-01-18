@@ -1,6 +1,6 @@
 # Experimental Details and Reproducibility
 
-This document provides a comprehensive description of the experimental setup, baseline implementations, hyperparameter tuning strategy, and statistical validation used in our study. The goal is to ensure full transparency and reproducibility of all reported results.
+This document provides a comprehensive description of the experimental setup, baseline implementations, hyperparameter tuning strategy, and statistical validation used in our study. The goal is to ensure transparency and reproducibility of all reported results.
 
 ## 1. Baseline Implementations and Code Provenance
 
