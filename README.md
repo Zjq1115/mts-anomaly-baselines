@@ -63,7 +63,7 @@ Most reproduced results fall within ±5% of the reported values. Minor deviation
 
 We additionally provide training loss curves for **all baseline methods and TECamba**. All models exhibit smooth, monotonically decreasing loss trajectories and converge within 10–20 epochs, indicating stable and correct implementations.
 
-![image-20260114192549939](/pics/image-20260114192549939.png)
+![image-20260114192549939](/pics/QQ20260310-095322.jpg)
 
 ![image-20260114192609939](/pics/image-20260114192609939.png)
 
@@ -101,7 +101,7 @@ All hyperparameters were selected **exclusively on the validation set**. The tes
 
 | ***\*Model\**** | ***\*Dataset\****                            | ***\*Key Hyperparameters\****                                | ***\*Values Used\****                     |
 | --------------- | -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------|
-| GDN             | SMD, SMAP, PSM, SWaT                         | embed_vectors length, topk, hidden layers                    | 128, 30, 128                              |
+| TopoGDN         | SMD, SMAP, PSM, SWaT                         | embed_vectors length, topk, hidden layers                    | 128, 30, 128                              |
 |                 | MSL, WADI                                    |                                                              | 64, 15, 64                                |
 |                 | MBA, NIPS-TS-SWAN                            |                                                              | 64, 20, 64                                |
 | MTGFlow         | SWaT, PSM                                    | win_size, n_blocks, batch                                    | 60, 1, 512                                |
@@ -172,7 +172,7 @@ To rigorously assess statistical significance, we conducted **paired bootstrap t
 
 | ***\*TECamba vs.\**** | ***\*SMAP\**** | ***\*MSL\**** | ***\*SMD\**** | ***\*SWaT\**** | ***\*MBA\**** | ***\*WADI\**** | ***\*NIPS-TS-SWAN\**** | ***\*Synthetic Data\**** |
 | --------------------- | -------------- | ------------- | ------------- | -------------- | ------------- | -------------- | ---------------------- | ------------------------ |
-| GDN                   | <0.001**       | <0.001**      | <0.001**      | <0.001**       | <0.001**      | <0.001**       | <0.001**               | <0.001**                 |
+| TopoGDN               | <0.001**       | <0.001**      | <0.001**      | <0.001**       | <0.001**      | <0.001**       | <0.001**               | <0.001**                 |
 | MTGFlow               | <0.001**       | 0.041*        | <0.001**      | <0.001**       | <0.001**      | <0.001**       | <0.001**               | 0.027*                   |
 | TranAD                | 0.412          | <0.001**      | <0.001**      | <0.001**       | 0.084         | <0.001**       | <0.001**               | 0.003**                  |
 | iTransformer          | 0.011*         | 0.036*        | 0.075         | 0.003**        | <0.001**      | <0.001**       | <0.001**               | 0.002**                  |
