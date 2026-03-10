@@ -10,7 +10,7 @@ To ensure experimental reproducibility, we clearly distinguish between baseline 
 
 The following baseline methods were evaluated using their official public implementations:
 
-- **GDN**: https://github.com/d-ailin/GDN
+- **TopoGDN**: https://github.com/ljj-cyber/TopoGDN
 - **MTGFlow**: https://github.com/zqhang/MTGFLOW
 - **TranAD**: https://github.com/imperial-qore/TranAD
 - **iTransformer**: https://github.com/zqhang/MTGFLOW
@@ -49,7 +49,7 @@ To validate implementation correctness, we compared our reproduced results with 
 
 | Model        | Dataset | Metric | Paper  | Ours   | Δ     |
 | ------------ | ------- | ------ | ------ | ------ | ----- |
-| GDN          | SWaT    | F1     | 0.8100 | 0.7603 | −6.1% |
+| TopoGDN      | SWaT    | F1     | 0.7911 | 0.7713 | -2.5% |
 | MTGFlow      | SMD     | AUROC  | 0.9890 | 0.9711 | −1.8% |
 | TranAD       | SMAP    | F1     | 0.8915 | 0.9112 | +2.2% |
 | D3R          | SMD     | F1     | 0.8632 | 0.9105 | +5.4% |
@@ -57,7 +57,7 @@ To validate implementation correctness, we compared our reproduced results with 
 | GCAD         | SWaT    | AUROC  | 0.8690 | 0.8714 | +0.2% |
 | MultiverseAD | SMD     | F1     | 0.9244 | 0.9658 | +4.4% |
 
-Most reproduced results (8/11 models) fall within ±5% of the reported values. Minor deviations are expected due to differences in random seeds, hardware, preprocessing details, and undocumented implementation choices.
+Most reproduced results fall within ±5% of the reported values. Minor deviations are expected due to differences in random seeds, hardware, preprocessing details, and undocumented implementation choices.
 
 ### 1.4 Training Dynamics Verification
 
